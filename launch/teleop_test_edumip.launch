@@ -1,0 +1,15 @@
+<launch>
+
+  	<node name="turtle_teleop_joy" pkg="turtlesim" type="turtle_teleop_key">
+
+		<remap from="turtle1/cmd_vel" to="edumip_teleop_key"/>
+
+	</node>
+
+  	<node name="teleop_edumip" pkg="mas_framework" type="teleop_edumip.py">
+
+        	<param name="number" value="2"/>
+
+    	</node>
+
+</launch>
